@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  web:
+    tty: true
+    stdin_open: true
+    build:
+      context: .
+      target: "setup"
+    command: go run main.go
+    ports:
+      - 8080:8080
